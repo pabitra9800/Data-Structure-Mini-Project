@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Structures</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h1>Interactive Data Structures</h1>
+
+    <!-- Tabs (Data Structure Names) -->
+    <div class="tabs-container">
+        <div id="stack-tab" class="tab" onclick="toggleContent('stack')">Stack</div>
+        <div id="queue-tab" class="tab" onclick="toggleContent('queue')">Queue</div>
+        <div id="array-tab" class="tab" onclick="toggleContent('array')">Array</div>
+        <div id="linked-list-tab" class="tab" onclick="toggleContent('linked-list')">Linked List</div>
+        <div id="bst-tab" class="tab" onclick="toggleContent('bst')">BST</div>
+        <!-- <div id="bst-tab" class="tab" onclick="toggleContent('bst')">Binary Search Tree</div> -->
+    </div>
+
+    <!-- Stack Content (Initially Hidden) -->
+    <div id="stack-content" class="data-structure-content">
+        <button onclick="pushToStack()">Push to Stack</button>
+        <button onclick="popFromStack()">Pop from Stack</button>
+        <div id="stack-display" class="glow">Stack is empty</div>
+    </div>
+
+    <!-- Queue Content (Initially Hidden) -->
+    <div id="queue-content" class="data-structure-content">
+        <button onclick="enqueue()">Enqueue to Queue</button>
+        <button onclick="dequeue()">Dequeue from Queue</button>
+        <div id="queue-display" class="glow">Queue is empty</div>
+    </div>
+
+    <!-- Array Content (Initially Hidden) -->
+    <div id="array-content" class="data-structure-content">
+        <button onclick="addToArray()">Add to Array</button>
+        <button onclick="removeFromArray()">Remove from Array</button>
+        <div id="array-display" class="glow">Array is empty</div>
+    </div>
+
+    <!-- Linked List Content (Initially Hidden) -->
+    <div id="linked-list-content" class="data-structure-content">
+      <button onclick="addToLinkedList()">Add to Linked List</button>
+      <button onclick="removeFromLinkedList()">Remove from Linked List</button>
+      <div id="linked-list-display" class="glow">Linked List is empty</div>
+    </div>
+
+
+    <!-- Binary Search Tree Content (Initially Hidden) -->
+    <div id="bst-content" class="data-structure-content">
+      <button onclick="insertToBST()">Insert to BST</button>
+      <button onclick="removeFromBST()">Remove from BST</button>
+      <div id="bst-display" class="glow">BST is empty</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

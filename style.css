@@ -1,0 +1,163 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #4c6ef5, #61dafb);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+  /* text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); */
+  /* color: #bffaff; */
+  text-shadow: 0 0 10px #ff00b3, 0 0 20px #00eaff, 0 0 30px #ff00b3;
+  /* text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 30px #00eaff; */
+}
+
+/* Tabs Style */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  /* border: 2px solid #000000; */
+  margin-top: 30px;
+  width: 90%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0px;
+  /* padding: 10px 0px 10px 50px; */
+}
+
+.tabs-container::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #00ffc8;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  margin: 0 10px;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tab:hover {
+  background: linear-gradient(45deg, #f1e6f6, #d146fc);
+  /* background: linear-gradient(45deg, #ff7c7c, #ff6f61); */
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.active-tab {
+  background: linear-gradient(45deg, #bad8f8, #28b2fd);
+  /* background: linear-gradient(45deg, #ff7c7c, #ff6f61); */
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Section for Data Structures */
+.data-structure-content {
+  display: none;
+  margin-top: 30px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.active-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button Styles */
+button {
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #c4ecb5, #c1fa3c);
+  /* background: linear-gradient(45deg, #ff7c7c, #ff6f61); */
+  color: rgb(231, 146, 96);
+  text-shadow: 0 0 10px #fba3e0, 0 0 20px #dc7cd6, 0 0 30px #feb4fa;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  color: rgb(96, 231, 209);
+  text-shadow: 0 0 10px #a3fbef, 0 0 20px #7cc9dc, 0 0 30px #b4fef2;
+  background: linear-gradient(45deg, #ff9f9f, #ff6347);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Output Display Style (for Stack, Queue, and Array) */
+#stack-display, #queue-display, #array-display, #linked-list-display, #bst-display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  min-height: 50px;
+  width: 50%;  /* Set width to 50% */
+  margin: 0 auto;  /* Center content horizontally */
+  text-align: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Media Query for smaller devices (e.g., phones) */
+@media (max-width: 768px) {
+  #stack-display, #queue-display, #array-display, #linked-list-display, #bst-display {
+      width: 70%;  /* For smaller screens, use 80% width */
+  }
+  .tab {
+    padding: 10px 5px;
+    font-size: 1.3rem;
+    margin: 0 8px;
+  }
+  h1 {
+    font-size: 2rem;
+ }
+}
+
+/* Media Query for even smaller devices (e.g., very small phones) */
+@media (max-width: 480px) {
+  #stack-display, #queue-display, #array-display, #linked-list-display, #bst-display {
+      width: 60%;  /* For very small screens, use 90% width */
+  }
+  .tabs-container {
+    width: 90%;
+  }
+  .tab {
+    padding: 5px 2px;
+    font-size: 1rem;
+    margin: 0 8px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.glow {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 30px #00eaff;
+}
